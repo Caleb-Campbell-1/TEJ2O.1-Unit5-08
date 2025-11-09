@@ -32,10 +32,8 @@ while (true) {
         if ((distanceToObject) <= (10)) {
         basic.pause(500)
         robotbit.StpCarMove(-10, 48)
-            robotbit.StepperTurn(robotbit.Steppers.M1, 90)
-            robotbit.StepperTurn(robotbit.Steppers.M2, 90)
-    //    robotbit.StepperDegree(robotbit.Steppers.M1, 512)
-      //  robotbit.StepperDegree(robotbit.Steppers.M2, 512)
+        robotbit.StepperTurn(robotbit.Steppers.M1, 90)
+        robotbit.StepperTurn(robotbit.Steppers.M2, 90)
         basic.pause(500)
 
         robotbit.StpCarMove(10, 48)
