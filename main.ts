@@ -12,10 +12,8 @@ basic.showIcon(IconNames.Happy)
 // variable
 let distanceToObject: number = 0
 
-
 // loop forever
 while (true) {
-   
 
     if (input.buttonIsPressed(Button.A) == true) {
         // move car forwards and backwards
@@ -41,7 +39,4 @@ while (true) {
         } else {
             basic.showIcon(IconNames.Heart)
         }
-    
-   
-
 }}
