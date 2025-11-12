@@ -34,9 +34,16 @@ while (true) {
         robotbit.StepperTurn(robotbit.Steppers.M2, 90)
         basic.pause(500)
 
-        robotbit.StpCarMove(10, 48)
+    basic.forever(function() {
+    robotbit.StpCarMove(10, 48)
+    })
+       
         basic.showIcon(IconNames.Happy)
         } else {
             basic.showIcon(IconNames.Heart)
         }
-}}
+
+    }}
+
+
+
