@@ -12,13 +12,12 @@ basic.showIcon(IconNames.Happy)
 // variable
 let distanceToObject: number = 0
 
-// loop forever
-while (true) {
+    // move car forwards and backwards
+    basic.showIcon(IconNames.Heart)
+    distanceToObject = 0
+    // loop forever
+    basic.forever(function () {
 
-    if (input.buttonIsPressed(Button.A) == true) {
-        // move car forwards and backwards
-        basic.showIcon(IconNames.Triangle)
-        distanceToObject = 0
         distanceToObject = sonar.ping(
             DigitalPin.P1,
             DigitalPin.P2,
@@ -33,17 +32,14 @@ while (true) {
         robotbit.StepperTurn(robotbit.Steppers.M1, 90)
         robotbit.StepperTurn(robotbit.Steppers.M2, 90)
         basic.pause(500)
-
-    basic.forever(function() {
-    robotbit.StpCarMove(10, 48)
-    })
-       
-        basic.showIcon(IconNames.Happy)
         } else {
-            basic.showIcon(IconNames.Heart)
-        }
 
-    }}
+        robotbit.StpCarMove(10, 48)
+        basic.showIcon(IconNames.Happy)
+    }
+    })
+
+
 
 
 
